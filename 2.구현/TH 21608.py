@@ -22,7 +22,7 @@ for i in range(c_student-1):
         for j in range(n):
             if arr[i][j]==0:
                 near = 0
-                empty =9999
+                empty =9999 #어떤 값이든 상관이 없다.
                 for k in range(4):
                     nx=i+dx[k]
                     ny=j+dy[k]

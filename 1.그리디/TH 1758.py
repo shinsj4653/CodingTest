@@ -1,16 +1,13 @@
-# 원래 주려고 생각했던 돈 - 받은등수 +1
-# 민호1 재필2 주현3
-# 3-1+1 2-2+1 1-3+1 3 1 -1
-# 받을 수 있는 팁의 최댓값
-N = int(input())
-answer=0
+n = int(input())
 tip=[]
-for i in range(N):
+for i in range(n):
     tip.append(int(input()))
+# 생각했던 돈이 작으면 등수 미뤄도 될듯.
 tip.sort(reverse=True)
-for i in range(N):
+answer=0
+for i in range(n):
     temp = tip[i]-i
-    if temp>=0:
-        answer+=temp
+    if temp<0:
+        temp=0
+    answer+=temp
 print(answer)
-#깎일 건 정해져 있으니까

@@ -6,6 +6,5 @@ for i in range(n):
     coins.append(int(input()))
 for coin in coins:
     for i in range(coin,k+1):
-        if i-coin>=0:
-            d[i]+=d[i-coin]
+        d[i]+=d[i-coin]
 print(d[k])
